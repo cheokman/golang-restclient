@@ -2,7 +2,6 @@ package rest
 
 import (
 	"errors"
-	"flag"
 	"fmt"
 	"net/http"
 	"net/http/httptest"
@@ -93,13 +92,13 @@ func startMockupServ() {
 	}
 }
 
-func init() {
-	flag.BoolVar(&mockUpEnv, "mock", false,
-		"Use 'mock' flag to tell package rest that you would like to use mockups.")
+// func init() {
+// 	flag.BoolVar(&mockUpEnv, "mock", false,
+// 		"Use 'mock' flag to tell package rest that you would like to use mockups.")
 
-	flag.Parse()
-	startMockupServ()
-}
+// 	flag.Parse()
+// 	startMockupServ()
+// }
 
 // AddMockups ...
 func AddMockups(mocks ...*Mock) error {
